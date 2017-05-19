@@ -1,0 +1,10 @@
+alkuun myös lisää
+muutama
+rivi
+tekstiä
+toka branch
+ottasinko tän pois <<<<<<< HEAD
+tokasta vielä lisää
+tässäkin virhe     =======
+vielä vähän lisää
+>>>>>>> master

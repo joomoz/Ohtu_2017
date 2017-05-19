@@ -1,0 +1,7 @@
+# Start, Stop, Continue, More of, Less of Wheel
+Retrospektiivitekniikka, jossa kerätään palaute iteraatiosta viiteen eri kategoriaan. Ensimmäiseen "start" kategoriaan kerätään asiat, joita olisi hyvä alkaa tekemään ja joita ei ole vielä tehty. Toiseen kategoriaan "stop" kerätään työtä haittaavia asioita, jotka on syytä lopettaa. Kolmas kategoria "continue" on tarkoitus täyttää asioilla jotka toimivat ja niitä on syytä jatkaa vanhaan malliin. "More of" kohtaan asiat, joita voisi hyödyntää enemmän ja viimeiseen kategoriaan "less of" kerätään ideat asioista joiden tekemistä pitäisi vähentää.
+
+Ryhmältä kerätään kommentit kaikkiin kohtiin ja pienen mietinnän/keskustelun jälkeen päätetään mitä muutoksia seuraavaan iteraatioon tehdään. Tämä retrospektiivitekniikkaa vie pieneltä ryhmältä aikaa noin 10 minuuttia ja suuremmalta noin 25, joten se on varsin nopea.
+
+# Glad, Sad, Mad
+Jokainen tiimin jäsen kirjoittaa erillisille lapuille lyhyesti kuvattuna asioita/huomioita sprintistä. Tämän jälkeen asiat kategorioidaan joko Glad, Sad tai Mad kategoriaan. Kaksi ensimmäistä kategoriaa ovat melko itsestään selittäviä, mutta "mad" kategoriaan voidaan laittaa hieman laajempiakin sprintin ulkopuolisia asioita, jotka huonontavat tiimin toimintaa. Seuraavaksi tiimin jäsenet antavat ääniä eri lapuille, jonka jälkeen asiat käydään läpi eniten ääniä saaneesta alkaen. Retrospektiivi loppuu kun joko kaikki asiat on käsitelty tai tilaisuuteen käytettävä aika on loppu. Suositus maksimissaan 1 tunti.

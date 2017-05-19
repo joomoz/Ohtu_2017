@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Varasto.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ohtuvarasto</a> &gt; <a href="index.source.html" class="el_package">ohtu.ohtuvarasto</a> &gt; <span class="el_source">Varasto.java</span></div><h1>Varasto.java</h1><pre class="source lang-java linenums">package ohtu.ohtuvarasto;
+
+public class Varasto {
+
+    // --- piilotettu tietorakenteen toteutus: ---
+    private double tilavuus;  // paljonko varastoon mahtuu,  &gt; 0
+    private double saldo;     // paljonko varastossa on nyt, &gt;= 0
+
+    // --- konstruktorit: ---
+<span class="fc" id="L10">    public Varasto(double tilavuus) {  // tilavuus on annettava</span>
+<span class="fc bfc" id="L11" title="All 2 branches covered.">        if (tilavuus &gt; 0.0) {</span>
+<span class="fc" id="L12">            this.tilavuus = tilavuus;</span>
+        } else // virheellinen, nollataan
+        {
+<span class="fc" id="L15">            this.tilavuus = 0.0;  // =&gt; käyttökelvoton varasto</span>
+        }
+<span class="fc" id="L17">        saldo = 0;     // oletus: varasto on tyhjä</span>
+<span class="fc" id="L18">    }</span>
+
+<span class="fc" id="L20">    public Varasto(double tilavuus, double alkuSaldo) { // kuormitetaan</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">        if (tilavuus &gt; 0.0) {</span>
+<span class="fc" id="L22">            this.tilavuus = tilavuus;</span>
+        } else // virheellinen, nollataan
+        {
+<span class="fc" id="L25">            this.tilavuus = 0.0;  // =&gt; käyttökelvoton varasto</span>
+        }
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        if (alkuSaldo &lt; 0.0) {</span>
+<span class="fc" id="L28">            this.saldo = 0.0;</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        } else if (alkuSaldo &lt;= tilavuus) // mahtuu</span>
+        {
+<span class="fc" id="L31">            this.saldo = alkuSaldo;</span>
+        } else {
+<span class="fc" id="L33">            this.saldo = tilavuus;  // täyteen ja ylimäärä hukkaan!</span>
+        }
+<span class="fc" id="L35">    }</span>
+
+    // --- ottavat aksessorit eli getterit: ---
+    public double getSaldo() {
+<span class="fc" id="L39">        return saldo;</span>
+    }
+
+    public double getTilavuus() {
+<span class="fc" id="L43">        return tilavuus;</span>
+    }
+
+    public double paljonkoMahtuu() {  // huom: ominaisuus voidaan myös laskea
+<span class="fc" id="L47">        return tilavuus - saldo;        //  ei tarvita erillistä kenttää vielaTilaa tms.</span>
+    }
+
+    // --- asettavat aksessorit eli setterit: ---
+    public void lisaaVarastoon(double maara) {
+<span class="fc bfc" id="L52" title="All 2 branches covered.">        if (maara &lt; 0) // virhetilanteessa voidaan tehdä </span>
+        {
+<span class="fc" id="L54">            return;       // tällainen pikapoistuminenkin!</span>
+        }
+<span class="fc bfc" id="L56" title="All 2 branches covered.">        if (maara &lt;= paljonkoMahtuu()) // omia aksessoreita voi kutsua</span>
+        {
+<span class="fc" id="L58">            saldo = saldo + maara;          // ihan suoraan sellaisinaan</span>
+        } else {
+<span class="fc" id="L60">            saldo = tilavuus;  // täyteen ja ylimäärä hukkaan!</span>
+        }
+<span class="fc" id="L62">    }</span>
+
+    public double otaVarastosta(double maara) {
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        if (maara &lt; 0) // virhetilanteessa voidaan tehdä </span>
+        {
+<span class="fc" id="L67">            return 0.0;   // tällainen pikapoistuminenkin!</span>
+        }
+<span class="fc bfc" id="L69" title="All 2 branches covered.">        if (maara &gt; saldo) {          // annetaan mitä voidaan</span>
+<span class="fc" id="L70">            double kaikkiMitaVoidaan = saldo;</span>
+<span class="fc" id="L71">            saldo = 0.0;               // ja tyhjäksi menee</span>
+<span class="fc" id="L72">            return kaikkiMitaVoidaan;  // poistutaan saman tien</span>
+        }
+        // jos tänne päästään, kaikki pyydetty voidaan antaa
+<span class="fc" id="L75">        saldo = saldo - maara;  // vähennetään annettava saldosta</span>
+<span class="fc" id="L76">        return maara;</span>
+    }
+
+    // --- Merkkijonoesitys Varasto-oliolle: ----
+    public String toString() {
+<span class="fc" id="L81">        return (&quot;saldo = &quot; + saldo + &quot;, vielä tilaa &quot; + paljonkoMahtuu());</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>

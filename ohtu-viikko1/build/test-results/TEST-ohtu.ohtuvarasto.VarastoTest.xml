@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ohtu.ohtuvarasto.VarastoTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2017-03-15T08:33:55" hostname="URauta" time="0.002">
+  <properties/>
+  <testcase name="liikaaEiVoiLisätä" classname="ohtu.ohtuvarasto.VarastoTest" time="0.0"/>
+  <testcase name="ottaminenPalauttaaOikeanMaaran" classname="ohtu.ohtuvarasto.VarastoTest" time="0.0"/>
+  <testcase name="lisaysLisaaPienentaaVapaataTilaa" classname="ohtu.ohtuvarasto.VarastoTest" time="0.0"/>
+  <testcase name="lisaysLisaaSaldoa" classname="ohtu.ohtuvarasto.VarastoTest" time="0.0"/>
+  <testcase name="negatiivinenLisaysEiLisaaSaldoa" classname="ohtu.ohtuvarasto.VarastoTest" time="0.0"/>
+  <testcase name="uudellaVarastollaVääräTilavuusJaSaldo" classname="ohtu.ohtuvarasto.VarastoTest" time="0.0"/>
+  <testcase name="stringiinTulostusToimiiOikein" classname="ohtu.ohtuvarasto.VarastoTest" time="0.0"/>
+  <testcase name="uudellaVarastollaEiVoiOllaLiikaaSaldoa" classname="ohtu.ohtuvarasto.VarastoTest" time="0.0"/>
+  <testcase name="uudellaVarastollaTilavuusNolla" classname="ohtu.ohtuvarasto.VarastoTest" time="0.0"/>
+  <testcase name="eiVoidaOttaaNegatiivistaMaaraa" classname="ohtu.ohtuvarasto.VarastoTest" time="0.0"/>
+  <testcase name="uudellaVarastollaOikeaTilavuusJaSaldo" classname="ohtu.ohtuvarasto.VarastoTest" time="0.0"/>
+  <testcase name="eiVoidaOttaaEnempääKuinOnMahdollista" classname="ohtu.ohtuvarasto.VarastoTest" time="0.0"/>
+  <testcase name="ottaminenLisääTilaa" classname="ohtu.ohtuvarasto.VarastoTest" time="0.0"/>
+  <testcase name="uudellaVarastollaOikeaTilavuus" classname="ohtu.ohtuvarasto.VarastoTest" time="0.0"/>
+  <testcase name="konstruktoriLuoTyhjanVaraston" classname="ohtu.ohtuvarasto.VarastoTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
